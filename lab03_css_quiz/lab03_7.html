@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+ *    { padding: 0px 0px 0px 0px ;
+        margin:  0px 0px 0px 0px ; } 
+ body {
+   font-family: sans-serif;
+   font-size: 0.75em; 
+   color: #333;
+ }
+ .tab-box {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 520px;
+    text-align:center ; 
+    padding-top: 3px ; 
+ } 
+ ul {
+  list-style-type: none ;
+  height: 27px;
+ }
+ li {
+   float: left;
+   width:100px ; height:22px; 
+   border:1px ;  border-style : solid ;
+   border-color: #999;
+   background-color:#ccc ;
+   margin-right:2px ;
+   border-radius: 10px 10px 0 0 ;
+ }
+ .tab-view {
+   width: 520px;
+   border-width : 1px  ;
+   border-style: solid ;
+   border-color: #595959 ;
+   margin-top: -1px ; 
+   text-align:center; 
+   line-height:200px;
+ } 
+ li:HOVER {
+   background-color: orange;	
+ }
+
+#tab-view1  {
+  display:none ; 
+}
+#tab-view2 {
+  display:none ; 
+}
+#tab-view3 {
+  display:none ;
+}
+#tab-view4 {
+  display:none ;
+}
+#tab-view5 {
+  display:none ;
+}
+ 
+ #tab-view1:target{
+   display: block;
+   background-color: red;
+ }
+ #tab-view2:target{
+   display: block;
+   background-color: orange;
+ }
+ #tab-view3:target{
+   display: block;
+   background-color: yellow;
+ }
+ #tab-view4:target{
+   display: block;
+   background-color: green;
+ }
+ #tab-view5:target{
+   display: block;
+   background-color: blue;
+ }
+</style>
+</head>
+<body>
+  <div class="tab-box">
+  <ul>
+    <!--  문제  :target  활용 
+        메뉴1이 클릭되면  id=tab-view1  이 화면에 보이고 
+        메뉴2이 클릭되면  id=tab-view2  이 화면에 보이고 
+        메뉴3이 클릭되면  id=tab-view3  이 화면에 보이고 
+        메뉴4이 클릭되면  id=tab-view4  이 화면에 보이고 
+        메뉴5이 클릭되면  id=tab-view5  이 화면에 보이게 코딩해보세요
+      -->
+   <li><a href="#tab-view1" >메뉴1</a></li>
+   <li><a href="#tab-view2" >메뉴2</a></li>
+   <li><a href="#tab-view3" >메뉴3</a></li>
+   <li><a href="#tab-view4" >메뉴4</a></li>
+   <li><a href="#tab-view5" >메뉴5</a></li> 
+ </ul>
+<div id="tab-view1" class="tab-view"> 탭뷰1입니다. </div> 
+<div id="tab-view2" class="tab-view"> 탭뷰2입니다. </div> 
+<div id="tab-view3" class="tab-view"> 탭뷰3입니다. </div> 
+<div id="tab-view4" class="tab-view"> 탭뷰4입니다. </div> 
+<div id="tab-view5" class="tab-view"> 탭뷰5입니다. </div> 
+</div>
+</body>
+</html>
