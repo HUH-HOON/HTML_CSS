@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+         가위바위보
+    </title>
+
+</head>
+<body onload="drawImage()"> 
+<form> 
+    <input type="radio" name="user" value="paper.png" onchange="drawImage()">보
+    <input type="radio" name="user" value="rock.png" onchange="drawImage()">바위
+    <input type="radio" name="user" value="scissors.png" checked onchange="drawImage()">가위
+    <br>
+    <input type="button" value="게임시작">
+    <br>
+<img id="amuge" src="scissors.png">
+</form>
+<script>
+   function drawImage()
+   {
+       var found = null;
+       var sel = document.getElementsByName("user"); // fruits 이름을 가진 모든 태그를 찾는 코드
+       var img = document.getElementById("amuge"); // 찾고자하는 id 값을 찾는 코드 
+    
+       for(var i=0; i<sel.length; i++) 
+       {
+           if(sel[i].checked == true) 
+           {
+               found = sel[i];
+               break; 
+           }
+       }
+       img.src = found.value;
+   }
+   </script>
+</body>
+</html>
